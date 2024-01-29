@@ -88,7 +88,7 @@ router.put("/:id", upload.single("image"), async (req, res) => {
 router.delete("/:id", async (req, res) => {
   try {
     if (req.query.image) {
-      fs.unlink(path.join("src", "uploads", req.query?.image), (err) => {
+      fs.unlink(path.join("src", "uploads", req.query.image), (err) => {
         if (err) return;
       });
     }
